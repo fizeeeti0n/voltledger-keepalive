@@ -34,3 +34,11 @@ jobs:
         env:
           BACKEND_URL: https://voltledger-api.onrender.com/api/health
         run: python keep_alive.py
+
+      - name: Ping Vercel frontend
+        run: |
+          curl --fail --silent --show-error \
+            --max-time 30 \
+            --output /dev/null \
+            --write-out "Frontend HTTP status: %{http_code}\n" \
+            https://voltledger-seven.vercel.app/  
