@@ -3,7 +3,7 @@ name: VoltLedger Backend Keep Alive
 
 on:
   schedule:
-    - cron: "*/4 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
